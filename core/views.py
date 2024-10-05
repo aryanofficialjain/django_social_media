@@ -175,6 +175,10 @@ def follow(request):
         return redirect("/")
 
 
+@login_required(login_url='signin')
+def search(request):
+    return render(request, 'search.html')
+
 
 
 def signup(request):
